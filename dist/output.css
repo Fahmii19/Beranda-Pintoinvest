@@ -843,6 +843,24 @@ video {
       padding-bottom: 0px;
     }
   }
+
+  @media (min-width: 360px) {
+    .text_card {
+      margin-top: 0.125rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .text_card {
+      margin-top: 0px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text_card {
+      margin-top: 0px;
+    }
+  }
 }
 
 .focus\:border-blue-500:focus {

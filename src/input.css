@@ -15,4 +15,8 @@
   .row_container_card {
     @apply sm:gap-10 md:gap-6 lg:gap-4 sm:pb-8 md:pb-0 lg:pb-0;
   }
+
+  .text_card {
+    @apply sm:mt-0.5 md:mt-0 lg:mt-0;
+  }
 }
