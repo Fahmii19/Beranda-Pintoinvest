@@ -779,10 +779,6 @@ video {
 }
 
 @media (min-width: 360px) {
-  .container_card {
-    border-width: 1px;
-  }
-
   @media (min-width: 360px) {
     .container_card {
       padding-left: 6rem;

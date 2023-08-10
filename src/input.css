@@ -4,7 +4,7 @@
 
 @media (min-width: 360px) {
   .container_card {
-    @apply sm:px-24 md:px-16 lg:px-20 border;
+    @apply sm:px-24 md:px-16 lg:px-20;
   }
 
   .container_search {
