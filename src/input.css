@@ -1,0 +1,18 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@media (min-width: 360px) {
+  .container_card {
+    @apply sm:px-8 md:px-16 lg:px-20;
+  }
+
+  .container_search {
+    /* @apply mb-[10vh] mt-2 sm:mb-[10vh] sm:mt-2 lg:mb-[10vh] lg:mt-16; */
+    @apply mt-2 sm:mb-[5vh] sm:mt-2 lg:mb-[10vh] lg:mt-16;
+  }
+
+  .row_container_card {
+    @apply sm:gap-10 md:gap-6 lg:gap-4 sm:pb-8 md:pb-0 lg:pb-0;
+  }
+}

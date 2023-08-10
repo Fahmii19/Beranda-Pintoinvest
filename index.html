@@ -8,357 +8,227 @@
 
     <link rel="icon" href="favicon.ico" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/output.css" />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="bg-gray-100">
     <div
-      class="h-screen w-screen bg-gray-100 flex flex-col justify-center items-center"
+      class="h-full lg:h-screen w-full md:w-screen flex flex-col justify-center items-center sm:flex-row sm:justify-start sm:items-stretch"
     >
-      <!-- Logo Invest -->
-      <div class="mb-[10vh] -mt-16">
-        <img
-          class="h-auto max-w-full"
-          src="logo-invest-dashboard.png"
-          alt="logo invest"
-        />
+      <div class="flex flex-col">
+        <!-- Logo Invest -->
+        <div class="flex flex-col items-center container_search search_padding">
+          <img
+            class="h-auto max-w-full"
+            src="logo-invest-dashboard.png"
+            alt="logo invest"
+          />
 
-        <!-- Search -->
-        <div class="px-12">
-          <!-- <form> -->
-          <label
-            for="search-city"
-            class="mb-2 text-sm font-medium text-gray-900 sr-only"
-            >Search</label
+          <!-- Search -->
+          <div class="px-4 sm:px-12 lg:px-16">
+            <label
+              for="search-city"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only"
+            >
+              Search
+            </label>
+            <div class="relative">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                oninput="showResult()"
+                type="search"
+                id="search-city"
+                class="block w-full pl-10 pr-[1rem] text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 h-10"
+                placeholder="Cari ..."
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="h-[50vh] container_card">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 row_container_card"
           >
-          <div class="relative">
             <div
-              class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+              id="no-results"
+              class="hidden text-xl font-medium text-gray-600 col-span-full text-center"
             >
-              <svg
-                class="w-4 h-4 text-gray-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                ></path>
-              </svg>
+              <figure class="max-w-[19vw]">
+                <img
+                  class="h-auto max-w-full rounded-lg"
+                  src="not_found.png"
+                  alt="not found"
+                />
+                <figcaption
+                  class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400"
+                >
+                  Data tidak ditemukan
+                </figcaption>
+              </figure>
             </div>
-            <input
-              oninput="showResult()"
-              type="search"
-              id="search-city"
-              class="block w-full pl-[2.3rem] pr-[1rem] text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 h-10"
-              placeholder="Cari ..."
-              required
-            />
-          </div>
-          <!-- </form> -->
-        </div>
-      </div>
-
-      <div class="h-[50vh] px-12">
-        <div class="grid grid-cols-3 gap-y-6 gap-x-2 grid_custom">
-          <div
-            id="no-results"
-            class="hidden text-xl font-medium text-gray-600 col-span-3 text-center"
-          >
-            <figure class="max-w-[19vw]">
-              <img
-                class="h-auto max-w-full rounded-lg"
-                src="not_found.png"
-                alt="not found"
-              />
-              <figcaption
-                class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400"
-              >
-                Data tidak ditemukan
-              </figcaption>
-            </figure>
-          </div>
-          <!-- Jakarta -->
-          <div
-            data-city="jakarta"
-            class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-          >
-            <a href="https://jakarta.pintoinvest.com/" target="_blank">
-              <img
-                class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-                src="jakarta.png"
-                alt="product image"
-              />
-              <div class="flex items-center justify-center pb-1">
-                <div class="">
-                  <h5
-                    class="text-md font-semibold tracking-tight text-gray-900"
-                  >
-                    Jakarta
-                  </h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- Tangsel -->
-          <div
-            data-city="tangerang selatan"
-            class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-          >
-            <a href="https://tangsel.pintoinvest.com/" target="_blank">
-              <img
-                class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-                src="tangsel.jpeg"
-                alt="product image"
-              />
-              <div class="flex items-center justify-center pb-1">
-                <div class="">
-                  <h5
-                    class="text-md font-semibold tracking-tight text-gray-900"
-                  >
-                    Tangerang Selatan
-                  </h5>
-                </div>
-              </div>
-            </a>
-          </div>
-          <!-- Bogor -->
-          <div
-            data-city="bogor"
-            class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-          >
-            <div>
-              <img
-                class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-                src="bogor.png"
-                alt="product image"
-              />
-              <div class="flex items-center justify-center pb-1">
-                <div class="">
-                  <h5
-                    class="text-md font-semibold tracking-tight text-gray-900"
-                  >
-                    Bogor
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Depok -->
-          <div
-            data-city="depok"
-            class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-          >
-            <div>
-              <img
-                class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-                src="depok.png"
-                alt="product image"
-              />
-              <div class="flex items-center justify-center pb-1">
-                <div class="">
-                  <h5
-                    class="text-md font-semibold tracking-tight text-gray-900"
-                  >
-                    Depok
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Tangerang -->
-          <div
-            data-city="tangerang"
-            class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-          >
-            <div>
-              <img
-                class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-                src="tangerang.png"
-                alt="product image"
-              />
-              <div class="flex items-center justify-center pb-1">
-                <div class="">
-                  <h5
-                    class="text-md font-semibold tracking-tight text-gray-900"
-                  >
-                    Tangerang
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Bekasi -->
-          <div
-            data-city="bekasi"
-            class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-          >
-            <div>
-              <img
-                class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-                src="bekasi.png"
-                alt="product image"
-              />
-              <div class="flex items-center justify-center pb-1">
-                <div class="">
-                  <h5
-                    class="text-md font-semibold tracking-tight text-gray-900"
-                  >
-                    Bekasi
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-3 gap-y-6 gap-x-2 grid_custom hidden">
-        <div
-          id="no-results"
-          class="hidden text-xl font-medium text-gray-600 col-span-3 text-center"
-        >
-          <figure class="max-w-[19vw]">
-            <img
-              class="h-auto max-w-full rounded-lg"
-              src="not_found.png"
-              alt="not found"
-            />
-            <figcaption
-              class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400"
+            <!-- Jakarta -->
+            <div
+              data-city="jakarta"
+              class="city-card w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
-              Data tidak ditemukan
-            </figcaption>
-          </figure>
-        </div>
-        <!-- Jakarta -->
-        <div
-          data-city="jakarta"
-          class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-        >
-          <a href="https://jakarta.pintoinvest.com/" target="_blank">
-            <img
-              class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-              src="jakarta.png"
-              alt="product image"
-            />
-            <div class="flex items-center justify-center pb-1">
-              <div class="">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900">
-                  Jakarta
-                </h5>
-              </div>
+              <a href="https://jakarta.pintoinvest.com/" target="_blank">
+                <img
+                  class="rounded-t-2xl w-full h-[16vh] object-cover"
+                  src="jakarta.png"
+                  alt="product image"
+                />
+                <div class="flex items-center justify-center pb-1">
+                  <div class="">
+                    <h5
+                      class="text-sm sm:text-md md:text-lg lg:text-md font-semibold tracking-tight text-gray-900"
+                    >
+                      Jakarta
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
-        <!-- Tangsel -->
-        <div
-          data-city="tangerang selatan"
-          class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-        >
-          <a href="https://tangsel.pintoinvest.com/" target="_blank">
-            <img
-              class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-              src="tangsel.jpeg"
-              alt="product image"
-            />
-            <div class="flex items-center justify-center pb-1">
-              <div class="">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900">
-                  Tangerang Selatan
-                </h5>
-              </div>
+            <!-- Depok -->
+            <div
+              data-city="depok"
+              class="city-card w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+            >
+              <a href="https://depok.pintoinvest.com/" target="_blank">
+                <img
+                  class="rounded-t-2xl w-full h-[16vh] object-cover"
+                  src="depok.png"
+                  alt="product image"
+                />
+                <div class="flex items-center justify-center pb-1">
+                  <div class="">
+                    <h5
+                      class="text-sm sm:text-md md:text-lg lg:text-md font-semibold tracking-tight text-gray-900"
+                    >
+                      Depok
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
-        <!-- Bogor -->
-        <div
-          data-city="bogor"
-          class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-        >
-          <div>
-            <img
-              class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-              src="bogor.png"
-              alt="product image"
-            />
-            <div class="flex items-center justify-center pb-1">
-              <div class="">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900">
-                  Bogor
-                </h5>
-              </div>
+            <!-- Bekasi -->
+            <div
+              data-city="bekasi"
+              class="city-card w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+            >
+              <a href="https://bekasi.pintoinvest.com/" target="_blank">
+                <img
+                  class="rounded-t-2xl w-full h-[16vh] object-cover"
+                  src="bekasi.png"
+                  alt="product image"
+                />
+                <div class="flex items-center justify-center pb-1">
+                  <div class="">
+                    <h5
+                      class="text-sm sm:text-md md:text-lg lg:text-md font-semibold tracking-tight text-gray-900"
+                    >
+                      Bekasi
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-        </div>
 
-        <!-- Depok -->
-        <div
-          data-city="depok"
-          class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-        >
-          <div>
-            <img
-              class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-              src="depok.png"
-              alt="product image"
-            />
-            <div class="flex items-center justify-center pb-1">
-              <div class="">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900">
-                  Depok
-                </h5>
-              </div>
+            <!-- Bogor -->
+            <div
+              data-city="bogor"
+              class="city-card w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+            >
+              <a href="https://bogor.pintoinvest.com/" target="_blank">
+                <img
+                  class="rounded-t-2xl w-full h-[16vh] object-cover"
+                  src="bogor.png"
+                  alt="product image"
+                />
+                <div class="flex items-center justify-center pb-1">
+                  <div class="">
+                    <h5
+                      class="text-sm sm:text-md md:text-lg lg:text-md font-semibold tracking-tight text-gray-900"
+                    >
+                      Bogor
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-        </div>
-        <!-- Tangerang -->
-        <div
-          data-city="tangerang"
-          class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-        >
-          <div>
-            <img
-              class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-              src="tangerang.png"
-              alt="product image"
-            />
-            <div class="flex items-center justify-center pb-1">
-              <div class="">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900">
-                  Tangerang
-                </h5>
-              </div>
+
+            <!-- Tangerang -->
+            <div
+              data-city="tangerang"
+              class="city-card w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+            >
+              <a href="https://tangerang.pintoinvest.com/" target="_blank">
+                <img
+                  class="rounded-t-2xl w-full h-[16vh] object-cover"
+                  src="tangerang.png"
+                  alt="product image"
+                />
+                <div class="flex items-center justify-center pb-1">
+                  <div class="">
+                    <h5
+                      class="text-sm sm:text-md md:text-lg lg:text-md font-semibold tracking-tight text-gray-900"
+                    >
+                      Tangerang
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-        </div>
-        <!-- Bekasi -->
-        <div
-          data-city="bekasi"
-          class="city-card mx-2 w-full max-w-[14vw] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
-        >
-          <div>
-            <img
-              class="rounded-t-2xl w-[15vw] h-[16vh] object-cover"
-              src="bekasi.png"
-              alt="product image"
-            />
-            <div class="flex items-center justify-center pb-1">
-              <div class="">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900">
-                  Bekasi
-                </h5>
-              </div>
+
+            <!-- Tangerang Selatan -->
+            <div
+              data-city="tangerang-selatan"
+              class="city-card w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+            >
+              <a
+                href="https://tangerangselatan.pintoinvest.com/"
+                target="_blank"
+              >
+                <img
+                  class="rounded-t-2xl w-full h-[16vh] object-cover"
+                  src="tangsel.jpeg"
+                  alt="product image"
+                />
+                <div class="flex items-center justify-center pb-1">
+                  <div class="">
+                    <h5
+                      class="text-sm sm:text-md md:text-lg lg:text-md font-semibold tracking-tight text-gray-900"
+                    >
+                      Tangerang Selatan
+                    </h5>
+                  </div>
+                </div>
+              </a>
             </div>
+
+            <!--  -->
           </div>
         </div>
       </div>
@@ -372,34 +242,28 @@
       const noResultsElement = document.getElementById("no-results");
       let resultsFound = false;
 
-      // Sembunyikan semua card
+      // Hide all cards
       cityCards.forEach((card) => {
         card.style.display = "none";
       });
 
-      // Tampilkan hanya card yang sesuai dengan query
+      // Find matching cities
       const matchingCities = cities.filter((city) =>
         city.toLowerCase().includes(query.toLowerCase())
       );
 
-      if (matchingCities.length === 2) {
-        const boxes = document.getElementsByClassName("grid_custom");
-        boxes[0].setAttribute(
-          "class",
-          "grid grid-cols-2 gap-y-6 gap-x-2 grid_custom"
-        );
-      } else if (matchingCities.length === 1) {
-        const boxes = document.getElementsByClassName("grid_custom");
-        boxes[0].setAttribute(
-          "class",
-          "grid grid-cols-1 gap-y-6 gap-x-2 grid_custom"
-        );
+      const boxes = document.querySelector(".row_container_card");
+
+      if (window.innerWidth >= 500) {
+        if (matchingCities.length === 2) {
+          boxes.style.gridTemplateColumns = "repeat(2, 1fr)";
+        } else if (matchingCities.length === 1) {
+          boxes.style.gridTemplateColumns = "repeat(1, 1fr)";
+        } else {
+          boxes.style.gridTemplateColumns = "repeat(3, 1fr)";
+        }
       } else {
-        const boxes = document.getElementsByClassName("grid_custom");
-        boxes[0].setAttribute(
-          "class",
-          "grid grid-cols-3 gap-y-6 gap-x-2 grid_custom"
-        );
+        console.log("tablet, desktop");
       }
 
       matchingCities.forEach((city) => {
@@ -410,7 +274,7 @@
         }
       });
 
-      // Jika tidak ada hasil yang ditemukan, tampilkan pesan "Data tidak ditemukan"
+      // If no results were found, show "Data not found" message
       if (!resultsFound) {
         noResultsElement.classList.remove("hidden");
       } else {
@@ -422,10 +286,14 @@
       "depok",
       "tangerang",
       "jakarta",
-      "tangerang selatan",
+      "tangerang-selatan",
       "bogor",
       "bekasi",
     ];
+
+    // Call once to initialize the layout
+    showResult();
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 </html>
