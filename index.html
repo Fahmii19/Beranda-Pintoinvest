@@ -103,7 +103,7 @@
                 <div class="flex items-center justify-center pb-1">
                   <div class="">
                     <h5
-                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font-semibold tracking-tight text-gray-900"
+                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font tracking-tight text-gray-900"
                     >
                       Jakarta
                     </h5>
@@ -125,7 +125,7 @@
                 <div class="flex items-center justify-center pb-1">
                   <div class="">
                     <h5
-                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font-semibold tracking-tight text-gray-900"
+                      class="text-sm sm:text-md md:text-lg lg:text-md text_card tracking-tight text-gray-900"
                     >
                       Depok
                     </h5>
@@ -147,7 +147,7 @@
                 <div class="flex items-center justify-center pb-1">
                   <div class="">
                     <h5
-                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font-semibold tracking-tight text-gray-900"
+                      class="text-sm sm:text-md md:text-lg lg:text-md text_card tracking-tight text-gray-900"
                     >
                       Bekasi
                     </h5>
@@ -170,7 +170,7 @@
                 <div class="flex items-center justify-center pb-1">
                   <div class="">
                     <h5
-                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font-semibold tracking-tight text-gray-900"
+                      class="text-sm sm:text-md md:text-lg lg:text-md text_card tracking-tight text-gray-900"
                     >
                       Bogor
                     </h5>
@@ -193,7 +193,7 @@
                 <div class="flex items-center justify-center pb-1">
                   <div class="">
                     <h5
-                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font-semibold tracking-tight text-gray-900"
+                      class="text-sm sm:text-md md:text-lg lg:text-md text_card tracking-tight text-gray-900"
                     >
                       Tangerang
                     </h5>
@@ -216,7 +216,7 @@
                 <div class="flex items-center justify-center pb-1">
                   <div class="">
                     <h5
-                      class="text-sm sm:text-md md:text-lg lg:text-md text_card font-semibold tracking-tight text-gray-900"
+                      class="text-sm sm:text-md md:text-lg lg:text-md text_card tracking-tight text-gray-900"
                     >
                       Tangerang Selatan
                     </h5>
@@ -237,15 +237,15 @@
     var os = getOperatingSystem();
     document.documentElement.classList.add(os);
 
-    // if (os === "Windows") {
-    //   document.querySelectorAll(".text_card").forEach(function (el) {
-    //     el.classList.add("font-semibold ");
-    //   });
-    // } else if (os === "MacOS") {
-    //   document.querySelectorAll(".text_card").forEach(function (el) {
-    //     el.classList.add("font-normal text-red-500");
-    //   });
-    // }
+    if (os === "Windows") {
+      document.querySelectorAll(".text_card").forEach(function (el) {
+        el.classList.add("font-semibold");
+      });
+    } else if (os === "MacOS") {
+      document.querySelectorAll(".text_card").forEach(function (el) {
+        el.classList.add("font-normal");
+      });
+    }
 
     console.log(os);
 
