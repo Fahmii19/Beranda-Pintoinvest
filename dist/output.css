@@ -619,10 +619,6 @@ video {
   height: 100%;
 }
 
-.max-h-\[20\.5vh\] {
-  max-height: 20.5vh;
-}
-
 .max-h-\[22\.5vh\] {
   max-height: 22.5vh;
 }
@@ -639,56 +635,16 @@ video {
   max-width: 19vw;
 }
 
-.max-w-full {
-  max-width: 100%;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-\[\] {
-  max-width: ;
-}
-
-.max-w-\[2\] {
-  max-width: 2;
-}
-
-.max-w-\[20vh\] {
-  max-width: 20vh;
-}
-
-.max-w-\[25vh\] {
-  max-width: 25vh;
-}
-
-.max-w-\[24vh\] {
-  max-width: 24vh;
-}
-
-.max-w-\[30vh\] {
-  max-width: 30vh;
-}
-
-.max-w-\[35vh\] {
-  max-width: 35vh;
-}
-
-.max-w-\[5vh\] {
-  max-width: 5vh;
-}
-
 .max-w-\[33vh\] {
   max-width: 33vh;
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+.max-w-full {
+  max-width: 100%;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -701,14 +657,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .rounded-2xl {
@@ -929,10 +877,6 @@ video {
 }
 
 @media (min-width: 360px) {
-  .sm\:max-w-md {
-    max-width: 28rem;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -949,17 +893,9 @@ video {
     justify-content: flex-start;
   }
 
-  .sm\:gap-10 {
-    gap: 2.5rem;
-  }
-
   .sm\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
-  }
-
-  .sm\:pb-8 {
-    padding-bottom: 2rem;
   }
 }
 
@@ -968,20 +904,8 @@ video {
     width: 100vw;
   }
 
-  .md\:max-w-lg {
-    max-width: 32rem;
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:gap-6 {
-    gap: 1.5rem;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0px;
   }
 
   .md\:text-lg {
@@ -995,24 +919,12 @@ video {
     height: 100vh;
   }
 
-  .lg\:max-w-xl {
-    max-width: 36rem;
-  }
-
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lg\:gap-4 {
-    gap: 1rem;
   }
 
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .lg\:pb-0 {
-    padding-bottom: 0px;
   }
 }
