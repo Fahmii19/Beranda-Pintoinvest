@@ -70,7 +70,7 @@
         <!--  -->
         <div class="h-[50vh] container_card">
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 row_container_card"
           >
             <div
               id="no-results"
@@ -92,7 +92,7 @@
             <!-- Jakarta -->
             <div
               data-city="jakarta"
-              class="city-card w-full max-w-[35vh] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+              class="city-card w-full max-w-[33vh] h-full max-h-[22.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
               <a href="https://jakarta.pintoinvest.com/" target="_blank">
                 <img
@@ -114,7 +114,7 @@
             <!-- Depok -->
             <div
               data-city="depok"
-              class="city-card w-full max-w-[35vh] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+              class="city-card w-full max-w-[33vh] h-full max-h-[22.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
               <a href="#" target="_blank">
                 <img
@@ -136,7 +136,7 @@
             <!-- Bekasi -->
             <div
               data-city="bekasi"
-              class="city-card w-full max-w-[35vh] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+              class="city-card w-full max-w-[33vh] h-full max-h-[22.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
               <a href="#" target="_blank">
                 <img
@@ -159,7 +159,7 @@
             <!-- Bogor -->
             <div
               data-city="bogor"
-              class="city-card w-full max-w-[35vh] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+              class="city-card w-full max-w-[33vh] h-full max-h-[22.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
               <a href="#" target="_blank">
                 <img
@@ -182,7 +182,7 @@
             <!-- Tangerang -->
             <div
               data-city="tangerang"
-              class="city-card w-full max-w-[35vh] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+              class="city-card w-full max-w-[33vh] h-full max-h-[22.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
               <a href="#" target="_blank">
                 <img
@@ -205,7 +205,7 @@
             <!-- Tangerang Selatan -->
             <div
               data-city="tangerang-selatan"
-              class="city-card w-full max-w-[35vh] h-full max-h-[20.5vh] bg-white border border-gray-200 rounded-2xl shadow"
+              class="city-card w-full max-w-[33vh] h-full max-h-[22.5vh] bg-white border border-gray-200 rounded-2xl shadow"
             >
               <a href="https://tangsel.pintoinvest.com/" target="_blank">
                 <img
@@ -249,19 +249,19 @@
         city.toLowerCase().includes(query.toLowerCase())
       );
 
-      // const boxes = document.querySelector(".row_container_card");
+      const boxes = document.querySelector(".row_container_card");
 
-      // if (window.innerWidth >= 500) {
-      //   if (matchingCities.length === 2) {
-      //     boxes.style.gridTemplateColumns = "repeat(2, 1fr)";
-      //   } else if (matchingCities.length === 1) {
-      //     boxes.style.gridTemplateColumns = "repeat(1, 1fr)";
-      //   } else {
-      //     boxes.style.gridTemplateColumns = "repeat(3, 1fr)";
-      //   }
-      // } else {
-      //   console.log("tablet, desktop");
-      // }
+      if (window.innerWidth >= 500) {
+        if (matchingCities.length === 2) {
+          boxes.style.gridTemplateColumns = "repeat(2, 1fr)";
+        } else if (matchingCities.length === 1) {
+          boxes.style.gridTemplateColumns = "repeat(1, 1fr)";
+        } else {
+          boxes.style.gridTemplateColumns = "repeat(3, 1fr)";
+        }
+      } else {
+        console.log("tablet, desktop");
+      }
 
       matchingCities.forEach((city) => {
         const cityCard = document.querySelector(`[data-city="${city}"]`);

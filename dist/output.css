@@ -623,6 +623,10 @@ video {
   max-height: 20.5vh;
 }
 
+.max-h-\[22\.5vh\] {
+  max-height: 22.5vh;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -673,6 +677,10 @@ video {
 
 .max-w-\[5vh\] {
   max-width: 5vh;
+}
+
+.max-w-\[33vh\] {
+  max-width: 33vh;
 }
 
 .grid-cols-1 {
