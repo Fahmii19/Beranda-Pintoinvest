@@ -674,107 +674,14 @@ video {
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-
-@media (min-width: 360px) {
-  @media (min-width: 360px) {
-
-    .container_card {
-      padding-left: 6rem;
-      padding-right: 6rem;
-    }
-  }
-  @media (min-width: 768px) {
-
-    .container_card {
-      padding-left: 4rem;
-      padding-right: 4rem;
-    }
-  }
-  @media (min-width: 1024px) {
-
-    .container_card {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-  }
-
-  .container_search {
-    /* @apply mb-[10vh] mt-2 sm:mb-[10vh] sm:mt-2 lg:mb-[10vh] lg:mt-16; */
-    margin-top: 0.5rem;
-  }
-
-  @media (min-width: 360px) {
-
-    .container_search {
-      margin-bottom: 5vh;
-      margin-top: 0.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .container_search {
-      margin-bottom: 10vh;
-      margin-top: 4rem;
-    }
-  }
-
-  @media (min-width: 360px) {
-
-    .row_container_card {
-      gap: 2.5rem;
-      padding-bottom: 2rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-
-    .row_container_card {
-      gap: 1.5rem;
-      padding-bottom: 0px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .row_container_card {
-      gap: 1rem;
-      padding-bottom: 0px;
-    }
-  }
-
-  @media (min-width: 360px) {
-
-    .text_card {
-      margin-top: 0.125rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-
-    .text_card {
-      margin-top: 0px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-
-    .text_card {
-      margin-top: 0px;
-    }
-  }
-}
-
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
-
 .focus\:ring-blue-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
 }
-
 @media (prefers-color-scheme: dark) {
 
   .dark\:text-gray-400 {
@@ -782,7 +689,6 @@ video {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
-
 @media (min-width: 360px) {
 
   .sm\:max-w-md {
@@ -810,7 +716,6 @@ video {
     padding-right: 3rem;
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:w-screen {
@@ -830,7 +735,6 @@ video {
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:h-screen {
