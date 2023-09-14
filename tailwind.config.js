@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["*.{html,js}"],
+  darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto"],
+      },
+    },
     screens: {
       sm: "360px",
       md: "768px",
