@@ -795,6 +795,10 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+body {
+  font-family: sans-serif;
+}
+
 @media (min-width: 360px) {
   @media (min-width: 360px) {
     .container_card {

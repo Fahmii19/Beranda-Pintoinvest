@@ -4,9 +4,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      fontFamily: {
-        sans_ui_serif: ["ui-sans-serif"],
-      },
+      // fontFamily: {
+      //   sans: ["Open Sans", "sans-serif"],
+      // },
     },
     screens: {
       sm: "360px",
