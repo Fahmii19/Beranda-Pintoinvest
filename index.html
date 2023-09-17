@@ -14,29 +14,28 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
   </head>
-  <body class="bg-gray-100 font-roboto">
+  <body class="bg-gray-100 font-sans_serif">
     <div
       class="h-full lg:h-screen w-full md:w-screen flex flex-col justify-center items-center sm:flex-row sm:justify-start sm:items-stretch"
     >
       <div class="flex flex-col">
         <!-- Logo Invest -->
-        <div class="flex flex-col items-center container_search search_padding">
-          <img
-            class="h-auto max-w-full"
-            src="logo-invest-dashboard.png"
-            alt="logo invest"
-          />
 
-          <!-- Search -->
-          <div class="px-4 sm:px-12 lg:px-16">
+        <div class="flex flex-col items-center container_search search_padding">
+          <!-- Gambar sebagai referensi lebar -->
+          <div class="w-full max-w-lg mx-auto">
+            <img
+              class="w-full h-auto"
+              src="logo-invest-dashboard.png"
+              alt="logo invest"
+            />
+          </div>
+
+          <!-- Search dengan lebar yang sama dengan gambar -->
+          <div
+            class="w-full max-w-lg mx-auto px-4 sm:px-0 mt-4 custom_padding_search"
+          >
             <label
               for="search-city"
               class="mb-2 text-sm font-medium text-gray-900 sr-only"
@@ -47,6 +46,7 @@
               <div
                 class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
               >
+                <!-- SVG remains unchanged -->
                 <svg
                   class="w-4 h-4 text-gray-500"
                   aria-hidden="true"
@@ -74,6 +74,7 @@
             </div>
           </div>
         </div>
+
         <!--  -->
         <div class="h-[50vh] container_card">
           <div

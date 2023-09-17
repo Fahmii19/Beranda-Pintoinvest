@@ -20,3 +20,8 @@
     @apply sm:mt-0.5 md:mt-0 lg:mt-0;
   }
 }
+
+.custom_padding_search {
+  padding-right: 4rem !important;
+  padding-left: 4rem !important;
+}
