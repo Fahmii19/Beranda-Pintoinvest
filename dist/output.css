@@ -744,10 +744,6 @@ video {
   text-align: center;
 }
 
-.font-sans_serif {
-  font-family: ui-sans-serif, system-ui;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;

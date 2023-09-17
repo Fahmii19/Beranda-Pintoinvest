@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans_serif: ["ui-sans-serif", "system-ui"],
+        sans_ui_serif: ["ui-sans-serif"],
       },
     },
     screens: {
