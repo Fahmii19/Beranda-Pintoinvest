@@ -889,8 +889,8 @@ body {
   }
 
   .custom_padding_search {
-    padding-right: 1.5rem !important;
-    padding-left: 1.2rem !important;
+    padding-right: 2.8rem !important;
+    padding-left: 2.5rem !important;
   }
 
   .custom_overflow {
@@ -976,8 +976,8 @@ body {
 }
 
 @media (min-width: 360px) {
-  .sm\:w-\[72vw\] {
-    width: 72vw;
+  .sm\:w-\[85vw\] {
+    width: 85vw;
   }
 
   .sm\:grid-cols-2 {
