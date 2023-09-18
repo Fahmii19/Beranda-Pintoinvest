@@ -928,7 +928,7 @@ body {
   }
 }
 
-@media (min-width: 1280) {
+@media (min-width: 1024px) {
   .container_search {
     /* @apply mb-[10vh] mt-2 sm:mb-[10vh] sm:mt-2 lg:mb-[10vh] lg:mt-16; */
     margin-top: 0.5rem;
