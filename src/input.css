@@ -51,7 +51,7 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280) {
   .container_search {
     /* @apply mb-[10vh] mt-2 sm:mb-[10vh] sm:mt-2 lg:mb-[10vh] lg:mt-16; */
     @apply mt-2 sm:mb-[5vh] sm:mt-2 lg:mb-[10vh] lg:mt-[2.5rem];
