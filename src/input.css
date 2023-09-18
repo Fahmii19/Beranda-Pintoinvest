@@ -3,12 +3,13 @@
 @import "tailwindcss/utilities";
 
 body {
-  font-family: sans-serif;
+  font-family: "Segoe UI";
+  /* font: 14px sans-serif; */
 }
 
 @media (min-width: 360px) {
   .container_card {
-    @apply sm:px-24 md:px-16 lg:px-20;
+    @apply sm:px-0 md:px-16 lg:px-20;
   }
 
   .container_search {
@@ -17,15 +18,51 @@ body {
   }
 
   .row_container_card {
-    @apply sm:gap-10 md:gap-6 lg:gap-4 sm:pb-8 md:pb-0 lg:pb-0;
+    @apply sm:gap-8 md:gap-6 lg:gap-4 sm:pb-8 md:pb-0 lg:pb-0;
   }
 
   .text_card {
     @apply sm:mt-0.5 md:mt-0 lg:mt-0;
   }
+
+  .custom_padding_search {
+    padding-right: 1.5rem !important;
+    padding-left: 1.2rem !important;
+  }
+
+  .custom_overflow {
+    overflow-y: auto !important;
+  }
 }
 
-.custom_padding_search {
-  padding-right: 4rem !important;
-  padding-left: 4rem !important;
+@media (min-width: 768px) {
+  .container_search {
+    /* @apply mb-[10vh] mt-2 sm:mb-[10vh] sm:mt-2 lg:mb-[10vh] lg:mt-16; */
+    @apply mt-2 sm:mb-[5vh] sm:mt-2 lg:mb-[10vh] lg:mt-16;
+  }
+
+  .custom_padding_search {
+    padding-right: 3.2rem !important;
+    padding-left: 3rem !important;
+  }
+
+  .custom_overflow {
+    overflow-y: hidden !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container_search {
+    /* @apply mb-[10vh] mt-2 sm:mb-[10vh] sm:mt-2 lg:mb-[10vh] lg:mt-16; */
+    @apply mt-2 sm:mb-[5vh] sm:mt-2 lg:mb-[10vh] lg:mt-[2.5rem];
+  }
+
+  .custom_padding_search {
+    padding-right: 4.7rem !important;
+    padding-left: 3.2rem !important;
+  }
+
+  .custom_overflow {
+    overflow-y: hidden !important;
+  }
 }

@@ -15,70 +15,74 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 font-segoe custom_overflow">
     <div
       class="h-full lg:h-screen w-full md:w-screen flex flex-col justify-center items-center sm:flex-row sm:justify-start sm:items-stretch"
     >
       <div class="flex flex-col">
         <!-- Logo Invest -->
 
-        <div class="flex flex-col items-center container_search search_padding">
-          <!-- Gambar sebagai referensi lebar -->
-          <div class="w-full max-w-lg mx-auto">
-            <img
-              class="w-full h-auto"
-              src="logo-invest-dashboard.png"
-              alt="logo invest"
-            />
-          </div>
-
-          <!-- Search dengan lebar yang sama dengan gambar -->
+        <div class="flex justify-center">
           <div
-            class="w-full max-w-lg mx-auto px-4 sm:px-0 mt-4 custom_padding_search"
+            class="flex flex-col items-center container_search search_padding sm:w-[72vw] md:w-[50vw] lg:w-[40vw] xl:w-[40vw] flex-shrink-0"
           >
-            <label
-              for="search-city"
-              class="mb-2 text-sm font-medium text-gray-900 sr-only"
-            >
-              Search
-            </label>
-            <div class="relative">
-              <div
-                class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-              >
-                <!-- SVG remains unchanged -->
-                <svg
-                  class="w-4 h-4 text-gray-500"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  ></path>
-                </svg>
-              </div>
-              <input
-                oninput="showResult()"
-                type="search"
-                id="search-city"
-                class="block w-full pl-10 pr-[1rem] text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 h-10"
-                placeholder="Cari ..."
-                required
+            <!-- Gambar sebagai referensi lebar -->
+            <div class="w-full max-w-lg mx-auto">
+              <img
+                class="w-full h-auto"
+                src="logo-invest-dashboard.png"
+                alt="logo invest"
               />
+            </div>
+
+            <!-- Search dengan lebar yang sama dengan gambar -->
+            <div
+              class="w-full max-w-lg mx-auto px-4 sm:px-0 mt-4 custom_padding_search"
+            >
+              <label
+                for="search-city"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only"
+              >
+                Search
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <!-- SVG remains unchanged -->
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  oninput="showResult()"
+                  type="search"
+                  id="search-city"
+                  class="block w-full pl-10 pr-[1rem] text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 h-10"
+                  placeholder="Cari ..."
+                  required
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <!--  -->
+        <!-- card nama-nama kota  -->
         <div class="h-[50vh] container_card">
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 row_container_card"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 row_container_card place-items-center"
           >
             <div
               id="no-results"
@@ -214,6 +218,7 @@
             <!--  -->
           </div>
         </div>
+        <!--  -->
       </div>
     </div>
   </body>
