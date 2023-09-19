@@ -804,8 +804,7 @@ video {
 }
 
 body {
-  font-family: "Segoe UI";
-  /* font: 14px sans-serif; */
+  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
 }
 
 @media (min-width: 360px) {
